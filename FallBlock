@@ -40,4 +40,3 @@ elseif cht == "/test" then
 destroyMap(game.Workspace:GetChildren())
 end
 end)
-end
