@@ -32,7 +32,7 @@ die()
 wait(0.01)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 wait(3.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1621.19312, -209.837006))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1640.19312, -209.837006))
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
