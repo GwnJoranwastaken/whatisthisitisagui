@@ -50,7 +50,7 @@ end
 print(suffer)
 elseif suffer == true then
 suffer = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1642.5686, -209.837006))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1642.5687, -209.837006))
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 print(suffer)
 end
