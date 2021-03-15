@@ -1,3 +1,5 @@
+local suffer = false
+
 function destroyMap(map)
     for i,v in pairs(map) do
         game:GetService("ReplicatedStorage").Events.TouchRE:FireServer(v)
@@ -36,7 +38,15 @@ wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 elseif cht == "/delAC" then
 game.Players.LocalPlayer.Character.CheckCheat:Destroy()
-elseif cht == "/test" then
-destroyMap(game.Workspace:GetChildren())
+elseif cht == "/SUFFER" then
+if suffer == false then
+suffer = true
+elsif suffer == true then
+suffer = false
 end
 end)
+
+while suffer == true do
+wait(2.5)
+die()
+end
