@@ -1,1 +1,54 @@
+function destroyMap(map)
+    for i,v in pairs(map) do
+        game:GetService("ReplicatedStorage").Events.TouchRE:FireServer(v)
+    end
+end
 
+local A_1 = "Gang Admin Loaded!"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(1)
+local A_1 = "Have Fun!"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+
+
+function die()
+destroyMap(game.Workspace.Maps.Map.Map1:GetChildren())
+destroyMap(game.Workspace.Maps.Map.Map2:GetChildren())
+destroyMap(game.Workspace.Maps.Map.Map3:GetChildren())
+destroyMap(game.Workspace.Maps.Map.Map4:GetChildren())
+destroyMap(game.Workspace.Maps.Map.Map5:GetChildren())
+end
+
+game.Players.LocalPlayer.Chatted:Connect(function(cht)
+if cht == "/Die" or cht == "/die" or cht == "/destroy map all"then
+die()
+elseif cht == "/destroy map1" then
+destroyMap(game.Workspace.Maps.Map.Map1:GetChildren())
+elseif cht == "/destroy map2" then
+destroyMap(game.Workspace.Maps.Map.Map2:GetChildren())
+elseif cht == "/destroy map3" then
+destroyMap(game.Workspace.Maps.Map.Map3:GetChildren())
+elseif cht == "/destroy map4" then
+destroyMap(game.Workspace.Maps.Map.Map4:GetChildren())
+elseif cht == "/destroy map5" then
+destroyMap(game.Workspace.Maps.Map.Map5:GetChildren())
+elseif cht == "/win" then
+die()
+wait(0.01)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(3.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1621.19312, -209.837006))
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+elseif cht == "/delAC" then
+game.Players.LocalPlayer.Character.CheckCheat:Destroy()
+elseif cht == "/test" then
+destroyMap(game.Workspace:GetChildren())
+end
+end)
+end
