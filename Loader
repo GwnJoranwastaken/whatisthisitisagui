@@ -1,0 +1,49 @@
+--Vars
+local gameid = game.PlaceId
+local jobid = game.JobId
+
+--Settings
+local Chat = _G.ShouldChat
+---------------------------------------------------------------------------------------------------------------------------------
+
+if gameid == 6155643742 then
+if Chat == "yes" then
+game.StarterGui:SetCore("SendNotification", {
+Title = "Welcome",
+Text = "Now Loading Please wait",
+Duration = 3,
+})
+local A_1 = "Fall Block Detected"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.25)
+local A_1 = "Loading"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnJoranwastaken/whatisthisitisagui/main/FallBlock"))()
+wait(0.25)
+local A_1 = "Gang Admin Loaded!"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end
+
+if Chat == "no" then
+game.StarterGui:SetCore("SendNotification", {
+Title = "Welcome",
+Text = "Now Loading Please wait",
+Duration = 3,
+})
+wait(3)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnJoranwastaken/whatisthisitisagui/main/FallBlock"))()
+game.StarterGui:SetCore("SendNotification", {
+Title = "Loaded",
+Text = "Have Fun!",
+Duration = 3,
+})
+end
+end
+print(gameid)
