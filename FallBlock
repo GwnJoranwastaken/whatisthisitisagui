@@ -4,17 +4,6 @@ function destroyMap(map)
     end
 end
 
-local A_1 = "Gang Admin Loaded!"
-local A_2 = "All"
-local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-Event:FireServer(A_1, A_2)
-wait(1)
-local A_1 = "Have Fun!"
-local A_2 = "All"
-local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-Event:FireServer(A_1, A_2)
-
-
 function die()
 destroyMap(game.Workspace.Maps.Map.Map1:GetChildren())
 destroyMap(game.Workspace.Maps.Map.Map2:GetChildren())
