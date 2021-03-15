@@ -41,12 +41,15 @@ game.Players.LocalPlayer.Character.CheckCheat:Destroy()
 elseif cht == "/SUFFER" then
 if suffer == false then
 suffer = true
-elsif suffer == true then
+while suffer == true do
+wait(3)
+die()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1621.19312, -209.837006))
+end
+print(suffer)
+elseif suffer == true then
 suffer = false
+print(suffer)
+end
 end
 end)
-
-while suffer == true do
-wait(2.5)
-die()
-end
