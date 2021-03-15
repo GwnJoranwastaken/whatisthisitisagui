@@ -44,7 +44,7 @@ suffer = true
 while suffer == true do
 wait(3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(109.548615, 1642.5686, -209.837006))
-game.Player.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 die()
 end
 print(suffer)
